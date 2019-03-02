@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript</title>
+</head>
+<body>
+	<p>what is a magic word?</p>
+	<p><input type="text" id="magicword" ></p>
+	<p><button id="checkw">enter</button></p>
+	<script type="text/javascript">
+		document.getElementById('checkw').onclick=function(){
+			var magicwordentered=document.getElementById('magicword').value;
+			var magicword="nasa";
+			if(magicwordentered==magicword){
+				alert('you got it!');
+			}
+			else{
+				alert('Nope,try again!');
+			}
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function average(a,b){
+			return((a+b)/2);
+			}
+		var x=5;
+		var y=10;
+		alert(average(x,y));
+	</script>
+
+</body>
+<hr>
+<body>
+	<p>How many fingers you holding up?</p>
+	<p><select id="mynumber">
+		<option>0</option>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+	</select>
+		<button id="guess">Guess</button></p>
+	<script type="text/javascript">
+		function doaguess(correctanswer){
+			var guess=Math.random();
+			guess=guess*6;
+			guess=Math.floor(guess);
+			if(guess==correctanswer){
+				return(true);
+				//computer is correct
+			}else{
+				return(false);
+				//computer is wrong
+			}
+		}
+		document.getElementById("guess").onclick=function(){
+			var mynumber=document.getElementById("mynumber").value;
+			var gotIt=false;
+			var numberofguess=1;
+			while(gotIt==false){
+			if(doaguess(mynumber)==true){
+				gotIt=true;
+				alert('got it!'+mynumber +'it took me'+ numberofguess +"guesses");
+				//computer is correct
+			}else{
+				numberofguess++;
+				//computer is wrong
+			}
+		}
+	}	
+	</script>
+</body>
+</html>
